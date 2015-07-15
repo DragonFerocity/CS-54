@@ -1,0 +1,41 @@
+//Ryan Andrews		Date: 4/29/14
+//Class: CS 54		Section: A
+
+using namespace std;
+
+template <class T>
+bool Stack<T>::Push(const T Item)
+{
+  bool isPushed = false;
+  if (!isFull())
+  {
+    m_Items[m_Size] = Item;
+    m_Size++;
+    isPushed = true;
+  }
+  return isPushed;
+}
+
+template <class T>
+T Stack<T>::Pop()
+{
+  const T Popped = m_Items[m_Size-1];
+  if (!isEmpty())
+  {
+    m_Items[m_Size-1] = 0;
+    m_Size--;
+  }
+  return Popped;
+}
+
+template <typename T>
+bool Stack<T>::Top(T & TopItem)
+{
+  bool TopFound = false;
+  if (!isEmpty())
+  {
+    TopItem = m_Items[m_Size-1];
+    TopFound = true;
+  }
+  return TopFound;
+}

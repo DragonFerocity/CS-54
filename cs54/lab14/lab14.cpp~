@@ -1,0 +1,31 @@
+//Ryan Andrews		Date: 4/29/14
+//Class: CS 54		Section: A
+
+#include "Stack.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int StackSize, Item;
+  stack<int> Pancakes;
+  
+  cout << "Do you like pancakes?" << endl << endl;
+  cout << "How many pancakes should we put on the plate?  ";
+  cin >> StackSize;
+  for (int i = 0; i < StackSize; i++)
+  {
+    cout << "Item " << i << ": ";
+    cin >> Item;
+    Pancakes.Push(Item);
+  }
+  cout << "\nHere what the Stack O' Pancakes looks like: \n";
+  for (int i = 0; i < StackSize; i++)
+  {
+    cout << Pancakes.Pop() << endl;
+  }
+  
+  cout << "\nSee you later!" << endl;
+  
+  return 0;
+}

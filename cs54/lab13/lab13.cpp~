@@ -1,0 +1,23 @@
+//Ryan Andrews		Date: 4/22/14
+//Class: CS 54		Section: 3A
+
+
+#include "Vector3d.h"
+using namespace std;
+
+int main()
+{
+  Vector3D v1, v2, v3;
+  
+  cout << "Wectors!" << endl << endl;
+  cout << "Please enter a vector:  ";
+  cin >> v1;
+  cout << "Please enter another vector:  ";
+  cin >> v2;
+  cout << endl;
+  cout << "Sum of the two vectors = " << v1+v2 << endl;
+  cout << "Difference of the two vectors = " << v1-v2;
+  cout << endl << endl << "have a nice day!" << endl;
+  
+  return 0;
+}

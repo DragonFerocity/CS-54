@@ -1,0 +1,268 @@
+
+*** These modified files were found in JOE when it aborted on Tue Apr  8 10:57:33 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'Lab11.cpp'
+//Ryan Andrews		Date: April 8, 2014
+//Class: CS 54		Section: 3A
+//File: Lab11.cpp
+
+//
+//
+//
+void display_welcome();
+//
+//
+//
+int find(char haystack[], char needle[]);
+//
+//
+//
+void subcpy(char source[], char destination[], int firstchar);
+//
+//
+//
+void subcpy(char source[], char destination[], int fc, int numchars);
+//
+//
+//
+void replace(char hay[], char needle[], char replacer[], char destination[]);
+//
+//
+//
+void display_goodbye();
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  char Message[] = "We love Big Brother! He protects us from Eastasia!";
+  char Destination[100];
+  
+  display_welcome();
+  find(Message,"Brother");
+  find(Message,"Eastasia");
+  find(Message,"She");
+  subcpy(Message, Destination, 3);
+  subcpy(Message, Destination, 3, 8);
+  subcpy(Message, Destination, 3, 100);
+  replace(Message,"Eastasia","Eurasia",Destination);  
+  
+  return 0;
+}
+
+void display_welcome()
+{
+  cout << "For Big Brother!" << endl << endl;
+  
+  return;
+}
+
+int find(char haystack[], char needle[])
+{
+  int Pos, i = 0, j = 0;
+  
+  while(haystack[i] != needle[j])
+  {
+    i++;
+    if (haystack[i] == needle[j])
+      j++;
+    else
+      j = 0;
+  }
+  //Pos = strstr(haystack, needle);
+  cout << "Finding \"" << needle << "\" in \"" << haystack << "\": " 
+       << Pos << endl;
+  
+  return Pos;
+}
+
+void subcpy (char source[], char destination[], int firstchar)
+{
+  int i = firstchar;
+  
+  while (source[i] != \0)
+  {
+    destination[i] = source[i];
+    i++;
+  }
+  
+  cout << "Subcpy " << firstchar << " -> end: " << endl;
+  cout << destination;
+  
+  return;
+}
+
+void subcpy (char source[], char destination[], int fc, int numchars)
+{
+  for (int i = fc; i < numchars; i++)
+    if (source[i] != \0)
+      destination[i] = source[i];
+
+  cout << "Subcpy " << fc << " -> " << numchars << ":" << endl;
+  cout << destination;
+  return;
+}
+
+void replace(char hay[], char needle[], char replacer[], char destination[])
+{
+  int Pos = 0;
+  //Pos = strstr(hay,needle);
+  subcpy(hay,destination,0,Pos);
+  strcat(destination,replacer);
+  subcpy(hay,destination,Pos+7);
+  
+  cout << "Original: " << hay << endl;
+  cout << "Fixed: " << destination << endl << endl;
+  
+  return;
+}
+
+*** File '(Unnamed)'
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr  8 11:09:04 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'Lab11.cpp'
+//Ryan Andrews		Date: April 8, 2014
+//Class: CS 54		Section: 3A
+//File: Lab11.cpp
+
+//
+//
+//
+void display_welcome();
+//
+//
+//
+int find(char haystack[], char needle[]);
+//
+//
+//
+void subcpy(char source[], char destination[], int firstchar);
+//
+//
+//
+void subcpy(char source[], char destination[], int fc, int numchars);
+//
+//
+//
+void replace(char hay[], char needle[], char replacer[], char destination[]);
+//
+//
+//
+void display_goodbye();
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  char Message[] = "We love Big Brother! He protects us from Eastasia!";
+  char Destination[100];
+  
+  display_welcome();
+  find(Message,"Brother");
+  find(Message,"Eastasia");
+  find(Message,"She");
+  subcpy(Message, Destination, 3);
+  subcpy(Message, Destination, 3, 8);
+  subcpy(Message, Destination, 3, 100);
+  replace(Message,"Eastasia","Eurasia",Destination);  
+  
+  return 0;
+}
+
+void display_welcome()
+{
+  cout << "For Big Brother!" << endl << endl;
+  
+  return;
+}
+
+int find(char haystack[], char needle[])
+{
+  int Pos, i = 0, j = 0;
+  
+  while(haystack[i] != '\0')
+  {
+    i++;
+    if (haystack[i] == needle[j])
+      j++;
+    else
+      j = 0;
+  }
+
+  cout << "Finding \"" << needle << "\" in \"" << haystack << "\": " 
+       << jy << endl;
+  
+  return Pos;
+}
+
+void subcpy (char source[], char destination[], int firstchar)
+{
+  int i = firstchar;
+  
+  while (source[i] != '\0')
+  {
+    destination[i] = source[i];
+    i++;
+  }
+  
+  cout << "Subcpy " << firstchar << " -> end: " << endl;
+  cout << destination;
+  
+  return;
+}
+
+void subcpy (char source[], char destination[], int fc, int numchars)
+{
+  for (int i = fc; i < numchars; i++)
+    if (source[i] != '\0')
+      destination[i] = source[i];
+
+  cout << "Subcpy " << fc << " -> " << numchars << ":" << endl;
+  cout << destination;
+  return;
+}
+
+void replace(char hay[], char needle[], char replacer[], char destination[])
+{
+  int Pos = 0;
+  //Pos = strstr(hay,needle);
+  subcpy(hay,destination,0,Pos);
+  strcat(destination,replacer);
+  subcpy(hay,destination,Pos+7);
+  
+  cout << "Original: " << hay << endl;
+  cout << "Fixed: " << destination << endl << endl;
+  
+  return;
+}
+
+*** File '(Unnamed)'
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp
+Lab11.cpp

@@ -1,0 +1,24 @@
+//Ryan Andrews		Date: March 3, 2014
+//Class: CS 54		Section: 3A
+//File: lab7.cpp
+//Purpose: 
+
+#include <iostream>
+using namespace std;
+#include "Delorean.h";
+
+int main()
+{
+  int Year, Month, Day;
+  //The year, month, and day to time travel to.
+  float FluxAmt;
+  //The correct flux setting to travel to the given date.
+  
+  displayWelcome();
+  getTimeWarp(Year, Month, Day);
+  FluxAmt = computeFlux(Year, Month, Day);
+  cout << "\n\n You should set the flux to " << FluxAmt << "." << endl;
+  displayGoodbye();
+  
+  return 0;
+}

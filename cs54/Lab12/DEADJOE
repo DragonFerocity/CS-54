@@ -1,0 +1,236 @@
+
+*** These modified files were found in JOE when it aborted on Tue Apr 15 10:40:57 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'MailClass.cpp'
+//Ryan Andrews		Date: April 15, 2014
+//Class: CS 54		Section: 3A
+
+#include "MailClass.h"
+using namespace std;
+
+void eMail::writeEMail()
+{
+  cout << "Who would you like to send an email to?\n Address:  ";
+  cin >> m_SendTo;
+  cout << "\nWhat is the subject of the email?\nSubject:  ";
+  cin.getline(m_Subject,99);
+  cout << "\nWhat is the body of the message?\n";
+  cin.getline(m_Message,499);
+
+  return;
+}
+
+void eMail::printEMail()
+{
+  cout << endl << "TO: " << m_SendTo << endl;
+  cout << "SUBJECT: " << m_Subject << endl;
+  cout << "BODY:\n" << m_Message << endl << endl;
+  
+  return;
+}
+  
+void eMail::printMorseEMail()
+{
+  int i = 0;
+  
+  cout << endl << "TO: " << m_SendTo << endl;
+  cout << "SUBJECT: " << m_Subject << endl;
+  cout << "BODY:\n";
+  
+  while(m_Message[i] != '\0')
+  {
+    switch (m_Message[i])
+    {
+      case 'a': 
+      case 'A': strcat(m_MorseMessage,".-  "); break;
+      case 'b':
+      case 'B': strcat(m_MorseMessage,"-...  "); break;
+      case 'c':
+      case 'C': strcat(m_MorseMessage,"-.-.  "); break;
+      case 'd':
+      case 'D': strcat(m_MorseMessage,"-..  "); break;
+      case 'e':
+      case 'E': strcat(m_MorseMessage,".  "); break;
+      case 'f':
+      case 'F': strcat(m_MorseMessage,"..-.  "); break;
+      case 'g':
+      case 'G': strcat(m_MorseMessage,"--.  "); break;
+      case 'h':
+      case 'H': strcat(m_MorseMessage,"....  "); break;
+      case 'i':
+      case 'I': strcat(m_MorseMessage,"..  "); break;
+      case 'j':
+      case 'J': strcat(m_MorseMessage,".---  "); break;
+      case 'k':
+      case 'K': strcat(m_MorseMessage,"-.-  "); break;
+      case 'l':
+      case 'L': strcat(m_MorseMessage,".-..  "); break;
+      case 'm':
+      case 'M': strcat(m_MorseMessage,"--  "); break;
+      case 'n':
+      case 'N': strcat(m_MorseMessage,"-.  "); break;
+      case 'o':
+      case 'O': strcat(m_MorseMessage,"---  "); break;
+      case 'p':
+      case 'P': strcat(m_MorseMessage,".--.  "); break;
+      case 'q':
+      case 'Q': strcat(m_MorseMessage,"--.-  "); break;
+      case 'r':
+      case 'R': strcat(m_MorseMessage,".-.  "); break;
+      case 's':
+      case 'S': strcat(m_MorseMessage,"...  "); break;
+      case 't':
+      case 'T': strcat(m_MorseMessage,"-  "); break;
+      case 'u':
+      case 'U': strcat(m_MorseMessage,"..-  "); break;
+      case 'v':
+      case 'V': strcat(m_MorseMessage,"...-  "); break;
+      case 'w':
+      case 'W': strcat(m_MorseMessage,".--  "); break;
+      case 'x':
+      case 'X': strcat(m_MorseMessage,"-..-  "); break;
+      case 'y':
+      case 'Y': strcat(m_MorseMessage,"-.--  "); break;
+      case 'z':
+      case 'Z': strcat(m_MorseMessage,"--..  "); break;
+      case ' ':
+      case ' ': strcat(m_MorseMessage,"      "); break;
+    }
+  
+  cout << m_MorseMessage << endl << endl;
+  
+  return;
+}
+
+*** File '(Unnamed)'
+MailClass.h
+MailClass.h
+MailClass.h
+MailClass.h
+MailClass.h
+MailClass.h
+MailClass.cpp
+MailClass.cpp
+Lab12.cpp
+Lab12.cpp
+MailClass.cpp
+
+*** These modified files were found in JOE when it aborted on Tue Apr 15 10:44:35 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'MailClass.cpp'
+//Ryan Andrews		Date: April 15, 2014
+//Class: CS 54		Section: 3A
+
+#include "MailClass.h"
+#include <cstring>
+using namespace std;
+
+void eMail::writeEMail()
+{
+  cout << "Who would you like to send an email to?\nAddress:  ";
+  cin >> m_SendTo;
+  cout << "\nWhat is the subject of the email?\nSubject:  ";
+  cin.ignore();
+  cin.getline(m_Subject,99);
+  cout << "\nWhat is the body of the message?\n";
+  cin.ignore();
+  cin.getline(m_Message,499);
+
+  return;
+}
+
+void eMail::printEMail()
+{
+  cout << endl << "TO: " << m_SendTo << endl;
+  cout << "SUBJECT: " << m_Subject << endl;
+  cout << "BODY:\n" << m_Message << endl << endl;
+  
+  return;
+}
+  
+void eMail::printMorseEMail()
+{
+  int i = 0;
+  
+  cout << endl << "TO: " << m_SendTo << endl;
+  cout << "SUBJECT: " << m_Subject << endl;
+  cout << "BODY:\n";
+  
+  while(m_Message[i] != '\0')
+  {
+    switch (m_Message[i])
+    {
+      case 'a': 
+      case 'A': strcat(m_MorseMessage,".-  "); break;
+      case 'b':
+      case 'B': strcat(m_MorseMessage,"-...  "); break;
+      case 'c':
+      case 'C': strcat(m_MorseMessage,"-.-.  "); break;
+      case 'd':
+      case 'D': strcat(m_MorseMessage,"-..  "); break;
+      case 'e':
+      case 'E': strcat(m_MorseMessage,".  "); break;
+      case 'f':
+      case 'F': strcat(m_MorseMessage,"..-.  "); break;
+      case 'g':
+      case 'G': strcat(m_MorseMessage,"--.  "); break;
+      case 'h':
+      case 'H': strcat(m_MorseMessage,"....  "); break;
+      case 'i':
+      case 'I': strcat(m_MorseMessage,"..  "); break;
+      case 'j':
+      case 'J': strcat(m_MorseMessage,".---  "); break;
+      case 'k':
+      case 'K': strcat(m_MorseMessage,"-.-  "); break;
+      case 'l':
+      case 'L': strcat(m_MorseMessage,".-..  "); break;
+      case 'm':
+      case 'M': strcat(m_MorseMessage,"--  "); break;
+      case 'n':
+      case 'N': strcat(m_MorseMessage,"-.  "); break;
+      case 'o':
+      case 'O': strcat(m_MorseMessage,"---  "); break;
+      case 'p':
+      case 'P': strcat(m_MorseMessage,".--.  "); break;
+      case 'q':
+      case 'Q': strcat(m_MorseMessage,"--.-  "); break;
+      case 'r':
+      case 'R': strcat(m_MorseMessage,".-.  "); break;
+      case 's':
+      case 'S': strcat(m_MorseMessage,"...  "); break;
+      case 't':
+      case 'T': strcat(m_MorseMessage,"-  "); break;
+      case 'u':
+      case 'U': strcat(m_MorseMessage,"..-  "); break;
+      case 'v':
+      case 'V': strcat(m_MorseMessage,"...-  "); break;
+      case 'w':
+      case 'W': strcat(m_MorseMessage,".--  "); break;
+      case 'x':
+      case 'X': strcat(m_MorseMessage,"-..-  "); break;
+      case 'y':
+      case 'Y': strcat(m_MorseMessage,"-.--  "); break;
+      case 'z':
+      case 'Z': strcat(m_MorseMessage,"--..  "); break;
+      case ' ': strcat(m_MorseMessage,"      "); break;
+    }
+  }
+  cout << m_MorseMessage << endl << endl;
+  
+  return;
+}
+
+*** File '(Unnamed)'
+Lab12.cpp
+Lab12.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp
+MailClass.cpp

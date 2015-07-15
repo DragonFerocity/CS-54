@@ -1,0 +1,23 @@
+
+*** These modified files were found in JOE when it aborted on Tue Jan 21 11:16:05 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'lab0.cpp'
+//Name: Ryan Andrews
+//Class and Section: CS 54, Section A
+//Date: 1/21/14
+//Description: Hello World Application
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   cout << "Hello, World!" << endl;
+   return 0;
+}
+
+*** File '(Unnamed)'
+lab0.cpp
+lab0.cpp
+a.out
+lab0.cpp
